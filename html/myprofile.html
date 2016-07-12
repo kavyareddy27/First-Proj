@@ -19,36 +19,42 @@
     border:0.5px;
     }
     table,th,td{
-      border-style: solid;
-      border-width: 0.5pt;
+    border-style: solid;
+    border-width: 0.5pt;
+    }
+    .images{
+      ;
     }
     </style>
     <script>
     function showImg1(){
-    document.getElementById('pic1').style.visibility="visible";
-    document.getElementById('pic2').style.visibility="hidden";
-    document.getElementById('pic3').style.visibility="hidden";
-    document.getElementById('pic4').style.visibility="hidden";
+    $("#pic1").show();
+    $("#pic2").hide();
+    $("#pic3").hide();
+    $("#pic4").hide();
     }
     function showImg2(){
-    document.getElementById('pic2').style.visibility="visible";
-    document.getElementById('pic1').style.visibility="hidden";
-    document.getElementById('pic3').style.visibility="hidden";
-    document.getElementById('pic4').style.visibility="hidden";
+    $("#pic2").show();
+    $("#pic1").hide();
+    $("#pic3").hide();
+    $("#pic4").hide();
     }
     function showImg3(){
-    document.getElementById('pic3').style.visibility="visible";
-    document.getElementById('pic2').style.visibility="hidden";
-    document.getElementById('pic1').style.visibility="hidden";
-    document.getElementById('pic4').style.visibility="hidden";
+    $("#pic3").show();
+    $("#pic1").hide();
+    $("#pic2").hide();
+    $("#pic4").hide();
     }
     function showImg4(){
-    document.getElementById('pic4').style.visibility="visible";
-    document.getElementById('pic3').style.visibility="hidden";
-    document.getElementById('pic2').style.visibility="hidden";
-    document.getElementById('pic1').style.visibility="hidden";
+    $("#pic4").show();
+    $("#pic2").hide();
+    $("#pic3").hide();
+    $("#pic1").hide();
     }
-    
+    $( document ).ready(function() {
+  // Handler for .ready() called.
+  $(".images").onclick(function(){showImg1()});
+});
     
     </script>
   </head>
@@ -62,11 +68,11 @@
         <div class="col-sm-3"><input id="img" type="button" value="Ohio" onclick="showImg4()"></div>
       </div>
       
-      <div class="container">
-        <img id="pic1" src="../images/indiana.png" width=750px height=100px style="visibility:hidden"/>
-        <img id="pic2" src="../images/michigan.gif" width=750px height=100px style="visibility:hidden"/>
-        <img id="pic3" src="../images/chicago.jpeg" width=750px height=100px style="visibility:hidden"/>
-        <img id="pic4" src="../images/ohio.jpg" width=750px height=100px style="visibility:hidden"/>
+      <div class="images">
+        <img id="pic1" src="../images/indiana.png" width=750px height=100px />
+        <img id="pic2" src="../images/michigan.gif" width=750px height=100px />
+        <img id="pic3" src="../images/chicago.jpeg" width=750px height=100px  />
+         <img id="pic3" src="../images/ohio.jpg" width=750px height=100px />
       </div>
       <div class="row">
         <div class="col-sm-3">
