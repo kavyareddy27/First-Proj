@@ -1,0 +1,32 @@
+<<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel ="stylesheet" type= "text/css" href ="../css/style7-12.css"/>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<title>Image show and hide</title>
+	</head>
+    <script>
+    	function showImg(){
+            document.getElementsByClassName('image').display.inline;
+    	}
+
+    </script>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">Indiana</div>
+				<div class="col-sm-4">Michigan</div>
+				<div class="col-sm-4">Chicago</div>
+			</div>
+			<div class="image">
+			<img id="img1" src="../images/indiana.png" onclick="showImg()" />
+			<img id="img2" src="../images/michigan.gif" onclick="showImg()" />
+			<img id="img3" src="../images/chicago.jpeg" onclick="showImg()"/>
+			</div>
+		</div>
+	</body>
+</html>
