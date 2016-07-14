@@ -8,180 +8,215 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <style>
+    <style type="text/css">
     body{
     background-color:lightblue;
     }
     button{
     background-color: red;
     }
-    .row{
-    border:0.5px;
-    }
     table,th,td{
     border-style: solid;
     border-width: 0.5pt;
+    border-color: black;
     }
-    .visibility{
-      visibility:show();
+    td,th{
+    text-align: center;
     }
-
+    th{
+    background-color: white;
+    color: red;
+    }
+    td{
+    background-color: white;
+    color: green;
+    }
+    table{
+    width:400px;
+    height:300px;
+    }
+    div.col-sm-3 {
+    width: 250px;
+    height:90px;
+    margin-left: 30px;
+    border: 2px solid;
+    /*vertical-align: middle;*/
+    line-height: 90px;
+    text-align: center;
+    background-color: white;
+    font-weight: 30pt;
+    }
+    .col-sm-3:hover{
+    width: 100%
+    padding-top: 30px;
+    padding-right: 20px;
+    color: red;
+    }
+    .col-sm-3:active{
+    background-color: grey;
+    }
+    #pic1,#pic2,#pic3,#pic4{
+    display: block;
+    margin: auto;
+    width: 100%;
+    }
+    p{
+    text-align: justify;
+    }
     </style>
-    <script>
-   
-    /*
-    function showImg1(){
-    $("#pic1").show();
-    $("#pic2").hide();
-    $("#pic3").hide();
-    $("#pic4").hide();
-    $("#p1").show();
-    $("#p2").hide();
-    $("#p3").hide();
-    $("#p4").hide();
-    $("#tableindy").show();
-    $("#tablemichigan").hide();
-    $("#tablechicago").hide();
-    $("#tableohio").hide();
-    }
-    function showImg2(){
-    $("#pic2").show();
-    $("#pic1").hide();
-    $("#pic3").hide();
-    $("#pic4").hide();
-    $("#p2").show();
-    $("#p1").hide();
-    $("#p3").hide();
-    $("#p4").hide();
-    $("#tablemichigan").show();
-    $("#tableindy").hide();
-    $("#tablechicago").hide();
-    $("#tableohio").hide();
-    }
-    function showImg3(){
-    $("#pic3").show();
-    $("#pic1").hide();
-    $("#pic2").hide();
-    $("#pic4").hide();
-    $("#p3").show();
-    $("#p2").hide();
-    $("#p1").hide();
-    $("#p4").hide();
-    $("#tablechicago").show();
-    $("#tablemichigan").hide();
-    $("#tableindy").hide();
-    $("#tableohio").hide();
-    }
-    function showImg4(){
-    $("#pic4").show();
-    $("#pic2").hide();
-    $("#pic3").hide();
-    $("#pic1").hide();
-    $("#p4").show();
-    $("#p2").hide();
-    $("#p3").hide();
-    $("#p1").hide();
-    $("#tableohio").show();
-    $("#tablemichigan").hide();
-    $("#tablechicago").hide();
-    $("#tableindy").hide();
-    }*/
-    
-    
-    </script>
   </head>
   <body>
     <div class="container">
       <div class="row">
         <h2>Info on States</h2>
-        <div class="col-sm-3"><input id="img" class="btn btn-color" type="button" value="Indiana" onclick="showDetails()"  ></div>
-        <div class="col-sm-3"><input id="img" type="button" value="Michigan" onclick="showDetails()"></div>
-        <div class="col-sm-3"><input id="img" type="button" value="Chicago" onclick="showDetails()"></div>
-        <div class="col-sm-3"><input id="img" type="button" value="Ohio" onclick="showDetails()"></div>
+        <div class="col-sm-3"  onclick="showImg1()"> Indiana</div>
+        <div class="col-sm-3"  onclick="showImg2()">Michigan</div>
+        <div class="col-sm-3"  onclick="showImg3()">Chicago</div>
+        <div class="col-sm-3"  onclick="showImg4()">Ohio</div>
       </div>
-      
-      <div class="images" id="img">
-        <img  src="../images/indiana.png" width=750px height=100px />
-        <img src="../images/michigan.gif" width=750px height=100px />
-        <img src="../images/chicago.jpeg" width=750px height=100px  />
-         <img  src="../images/ohio.jpg" width=750px height=100px />
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <p id="p1">Indiana is a Midwestern state known for its farmland and renowned auto race, the Indianapolis 500. In the capital, Indianapolis, theaters and galleries line Massachusetts Avenue, while Broad Ripple has hip bars and restaurants. The city’s Downtown is home to the iconic Soldiers and Sailors Monument, the Canal Walk promenade and the Indianapolis Museum of Art and its wide-ranging collections.
-          </p></div>
-          <div class="col-sm-3">
-          <p id="p2"> Michigan is the only state to consist of two peninsulas. The Lower Peninsula, to which the name Michigan was originally applied, is often noted to be shaped like a mitten. The Upper Peninsula (often referred to as "the U.P.") is separated from the Lower Peninsula by the Straits of Mackinac, a five-mile (8 km) channel that joins Lake Huron to Lake Michigan. The two peninsulas are connected by the Mackinac Bridge. The state has the longest freshwater coastline of any political subdivision in the world, being bounded by four of the five Great Lakes, plus Lake Saint Clair.As a result, it is one of the leading U.S. states for recreational boating.Michigan also has 64,980 inland lakes and ponds.[8] A person in the state is never more than six miles (9.7 km) from a natural water source or more than 85 miles (137 km) from a Great Lakes shoreline</p></div>
-          <div class="col-sm-3">
-          <p id= "p3">Chicago was incorporated as a city in 1837, near a portage between the Great Lakes and the Mississippi River watershed, and grew rapidly in the mid-nineteenth century. The city is an international hub for finance, commerce, industry, technology, telecommunications, and transportation: O'Hare International Airport is the second busiest airport in the world when measured by aircraft traffic; the region also has the largest number of U.S. highways and rail road freight.In 2012, Chicago was listed as an alpha global city by the Globalization and World Cities Research Network,[7] and ranked seventh in the world in the 2014 Global Cities Index.Chicago has the third largest gross metropolitan product in the United States—about $630.3 billion according to 2014-2016 estimates. The Chicago metropolitan area is also home to several universities, including Northwestern University, University of Chicago, and University of Illinois at Chicago.
-          </p></div>
-          <div class="col-sm-3">
-          <p id="p4">The state takes its name from the Ohio River. The name originated from the Iroquois word ohi-yo’, meaning "great river" or "large creek."Partitioned from the Northwest Territory, the state was admitted to the Union as the 17th state (and the first under the Northwest Ordinance) on March 1, 1803. Ohio is historically known as the "Buckeye State" after its Ohio buckeye trees, and Ohioans are also known as "Buckeyes."
-            The government of Ohio is composed of the executive branch, led by the Governor; the legislative branch, which comprises the Ohio General Assembly; and the judicial branch, which is led by the state Supreme Court. Ohio occupies 16 seats in the United States House of Representatives.[24] Ohio is known for its status as both a swing state[25] and a bellwether[25] in national elections. Six Presidents of the United States have been elected who had Ohio as their home state.
-          </p></div>
-        </div>
+      <div class="details" id="indy">
         <div class="row">
-          <div class="col-sm-3"><div class="col-sm-3">
-            <table id="tableindy">
-              <tr >
-                <th>Capital</th>
-                <th>Population</th>
-                <th>Stars</th>
-              </tr>
-              <tr>
-                <td>Indianapolis</td>
-                <td>500000</td>
-                <td>5</td>
-              </tr>
-            </table>
+          <div class="col-xs-12"><img id="pic1" src="../images/indiana.png" style="height:200px" />
           </div>
         </div>
-        <div class="col-sm-3"><div class="col-sm-3">
-          <table id="tablemichigan">
-            <tr >
-              <th>Capital</th>
-              <th>Population</th>
-              <th>Stars</th>
-            </tr>
-            <tr>
-              <td>Lansing</td>
-              <td>9,922,576 </td>
-              <td>5</td>
-            </tr>
-          </table>
+        <div class="row">
+          <div class="col-xs-12"><p>Indiana is a Midwestern state known for its farmland and renowned auto race, the Indianapolis 500. In the capital, Indianapolis, theaters and galleries line Massachusetts Avenue, while Broad Ripple has hip bars and restaurants. The city’s Downtown is home to the iconic Soldiers and Sailors Monument, the Canal Walk promenade and the Indianapolis Museum of Art and its wide-ranging collections.
+          </p></div></div>
+          <div class="row">
+            <div class="col-sm-offset-4 col-xs-12">
+              <table class="tab">
+                <tr>
+                  <th>Capital</th>
+                  <th>Population</th>
+                  <th>Stars</th>
+                </tr>
+                <tr>
+                  <td>Indianapolis</td>
+                  <td>500000</td>
+                  <td>5</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="details" id="mi">
+          <div class="row">
+            <div class="col-xs-12">  <img id="pic2" src="../images/michigan.gif" style="height:200px"/></div></div>
+            <div class="row">
+              <div class="col-xs-12"><p>Michigan is the only state to consist of two peninsulas. The Lower Peninsula, to which the name Michigan was originally applied, is often noted to be shaped like a mitten. The Upper Peninsula (often referred to as "the U.P.") is separated from the Lower Peninsula by the Straits of Mackinac, a five-mile (8 km) channel that joins Lake Huron to Lake Michigan. The two peninsulas are connected by the Mackinac Bridge. The state has the longest freshwater coastline of any political subdivision in the world, being bounded by four of the five Great Lakes, plus Lake Saint Clair.As a result, it is one of the leading U.S. states for recreational boating.Michigan also has 64,980 inland lakes and ponds.[8] A person in the state is never more than six miles (9.7 km) from a natural water source or more than 85 miles (137 km) from a Great Lakes shoreline
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-offset-4 col-xs-12">
+              <table class="tab">
+                <tr >
+                  <th>Capital</th>
+                  <th>Population</th>
+                  <th>Stars</th>
+                </tr>
+                <tr>
+                  <td>Lansing</td>
+                  <td>9,922,576 </td>
+                  <td>5</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="details" id="chi">
+          <div class="row">
+            <div class="col-xs-12"><img id="pic3" src="../images/chicago.jpeg" style="height:200px" /></div></div>
+            <div class="row">
+              <div class="col-xs-12"><p>Chicago was incorporated as a city in 1837, near a portage between the Great Lakes and the Mississippi River watershed, and grew rapidly in the mid-nineteenth century. The city is an international hub for finance, commerce, industry, technology, telecommunications, and transportation: O'Hare International Airport is the second busiest airport in the world when measured by aircraft traffic; the region also has the largest number of U.S. highways and rail road freight.In 2012, Chicago was listed as an alpha global city by the Globalization and World Cities Research Network,[7] and ranked seventh in the world in the 2014 Global Cities Index.Chicago has the third largest gross metropolitan product in the United States—about $630.3 billion according to 2014-2016 estimates. The Chicago metropolitan area is also home to several universities, including Northwestern University, University of Chicago, and University of Illinois at Chicago.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-offset-4 col-xs-12">
+              <table class="tab">
+                <tr >
+                  <th>Capital</th>
+                  <th>Population</th>
+                  <th>Stars</th>
+                </tr>
+                <tr>
+                  <td>Illinios</td>
+                  <td>2,720,546</td>
+                  <td>5</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="details" id="oh">
+          <div class="row">
+            <div class="col-xs-12"> <img id="pic4" src="../images/ohio.jpg" style="height:200px"/></div></div>
+            <div class="row">
+              <div class="col-xs-12"><p>The state takes its name from the Ohio River. The name originated from the Iroquois word ohi-yo’, meaning "great river" or "large creek."Partitioned from the Northwest Territory, the state was admitted to the Union as the 17th state (and the first under the Northwest Ordinance) on March 1, 1803. Ohio is historically known as the "Buckeye State" after its Ohio buckeye trees, and Ohioans are also known as "Buckeyes."
+                The government of Ohio is composed of the executive branch, led by the Governor; the legislative branch, which comprises the Ohio General Assembly; and the judicial branch, which is led by the state Supreme Court. Ohio occupies 16 seats in the United States House of Representatives.[24] Ohio is known for its status as both a swing state[25] and a bellwether[25] in national elections. Six Presidents of the United States have been elected who had Ohio as their home state.
+              </p><br></br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-offset-4 col-xs-12">
+              <table class="tab">
+                <tr >
+                  <th>Capital</th>
+                  <th>Population</th>
+                  <th>Stars</th>
+                </tr>
+                <tr>
+                  <td>Ohio</td>
+                  <td>2,720,546</td>
+                  <td>4</td>
+                </tr>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-sm-3"><div class="col-sm-3">
-        <table id="tablechicago">
-          <tr >
-            <th>Capital</th>
-            <th>Population</th>
-            <th>Stars</th>
-          </tr>
-          <tr>
-            <td>Illinios</td>
-            <td>2,720,546</td>
-            <td>5</td>
-          </tr>
-        </table>
-      </div>
     </div>
-    <div class="col-sm-3"><div class="col-sm-3">
-      <table id="tableohio">
-        <tr >
-          <th>Capital</th>
-          <th>Population</th>
-          <th>Stars</th>
-        </tr>
-        <tr>
-          <td>Ohio</td>
-          <td>2,720,546</td>
-          <td>4</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</div>
-</div>
-</body>
+    <script>
+    /*function showImg1(){
+    $(".details").hide();
+    $("#indiana").show();
+    }
+    function showImg2(){
+    $(".details").hide();
+    $("#michigan").show();
+    }
+    function showImg3(){
+    $(".details").hide();
+    $("#chicago").show();
+    }
+    function showImg4(){
+    $(".details").hide();
+    $("#ohio").show();
+    }
+    $(document).ready(function(){
+    $(".details").hide();
+    $("#indiana").show();
+    });*/
+    function showImg1(){
+    $(".details").hide();
+    $("#indy").show();
+    };
+    function showImg2(){
+    $(".details").hide();
+    $("#mi").show();
+    };
+    function showImg3(){
+    $(".details").hide();
+    $("#chi").show();
+    };
+    function showImg4(){
+    $(".details").hide();
+    $("#oh").show();
+    };
+    $(document).ready(function(){
+    $(".details").hide();
+    });
+    </script>
+  </body>
 </html>

@@ -13,42 +13,51 @@
 				border-width: 0.6pt;
 			}
 			
-			td{ 
+			td{
 				border: solid;
 				border-width: 0.6pt;
 				height:60%;
 				width:30%;
 				text-align: center;
 				color: red;
-
 			}
-			.focus{
+			/*.focus{
 				background-color: lightblue;
 			}
 			button.btn:focus{
 				background-color:lightblue;
-			}
+			}*/
 			
 		</style>
+		<script type="text/javascript">
+		function changeColor(event){
+			
+				event.target.style.background='red';
+				event.stopPropagation();
+			}
+			
+		}
+		</script>
+		
 		
 	</head>
 	<body>
-	<p> </p>
+		<p> </p>
 		<table >
 			<tr>
-				<td><button type= "text" id="btn1" class="btn btn-color">1</button></td>
-				<td><button type= "text" id="btn2" class="btn btn-color">2</button></td>
-				<td><button type= "text" id="btn3" class="btn btn-color">3</button></td>
+				<td><button type= "text" id="btn1" class="btn btn-color" onclick="changeColor(event)">1</button></td>
+				<td><button type= "text" id="btn2" class="btn btn-color" onclick="changeColor(event)">2</button></td>
+				<td><button type= "text" id="btn3" class="btn btn-color" onclick="changeColor(event)">3</button></td>
 			</tr>
 			<tr>
-				<td><button type= "text" id="btn4" class="btn btn-color">4</button></td>
-				<td><button type= "text" id="btn5" class="btn btn-color">5</button></td>
-				<td><button type= "text" id="btn6" class="btn btn-color">6</button></td>
+				<td><button type= "text" id="btn" class="btn btn-color" onclick="changeColor(event)">4</button></td>
+				<td><button type= "text" id="btn" class="btn btn-color" onclick="changeColor(event)">5</button></td>
+				<td><button type= "text" id="btn" class="btn btn-color" onclick="changeColor(event)">6</button></td>
 			</tr>
 			<tr>
-				<td><button type= "text" id="btn7" class="btn btn-color">7</button></td>
-				<td><button type= "text" id="btn8" class="btn btn-color">8</button></td>
-				<td><button type= "text" id="btn9" class="btn btn-color">9</button></td>
+				<td><button type= "text" id="btn7" class="btn btn-color" onclick="changeColor(event)">7</button></td>
+				<td><button type= "text" id="btn8" class="btn btn-color" onclick="changeColor(event)">8</button></td>
+				<td><button type= "text" id="btn9" class="btn btn-color" onclick="changeColor(event)">9</button></td>
 			</tr>
 		</table>
 	</body>
