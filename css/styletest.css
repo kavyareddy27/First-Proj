@@ -1,0 +1,56 @@
+body{
+    background-color:lightblue;
+    }
+    button{
+    background-color: red;
+    }
+    table,th,td{
+    border-style: solid;
+    border-width: 0.5pt;
+    border-color: black;
+    }
+    td,th{
+    text-align: center;
+    }
+    th{
+    background-color: white;
+    color: red;
+    }
+    td{
+    background-color: white;
+    color: green;
+    }
+    table{
+    width:400px;
+    height:300px;
+    }
+    div.col {
+    width: 250px;
+    height:90px;
+    margin-left: 30px;
+    border: 2px solid;
+    /*vertical-align: middle;*/
+    line-height: 90px;
+    text-align: center;
+    background-color: white;
+    font-weight: 30pt;
+    }
+    .col:hover{
+    width: 100%
+    padding-top: 30px;
+    padding-right: 20px;
+    color: red;
+    }
+    .col:active{
+    background-color: grey;
+    }
+    #pic1,#pic2,#pic3,#pic4{
+    padding-top: 20px;
+    display: block;
+    margin: auto;
+    width: 100%;
+    }
+    p{
+    text-align: justify;
+    padding-top: 20px;
+    }

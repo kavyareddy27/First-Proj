@@ -72,10 +72,10 @@
       <div class="row">
         <h2>Info on States</h2>
         <div class="clearfix visible-xs-block"></div>
-        <div class="col col-xs-12"  onclick="showImg1()"> Indiana</div>
-        <div class="col col-xs-12"  onclick="showImg2()">Michigan</div>
-        <div class="col col-xs-12"  onclick="showImg3()">Chicago</div>
-        <div class="col col-xs-12"  onclick="showImg4()">Ohio</div>
+        <div class="col col-xs-12 col-sm-12"  name="indy" onclick="showImg(event)"> Indiana</div>
+        <div class="col col-xs-12 col-sm-12"  name="mi" onclick="showImg(event)">Michigan</div>
+        <div class="col col-xs-12 col-sm-12"  name="chi" onclick="showImg(event)">Chicago</div>
+        <div class="col col-xs-12 col-sm-12"  name="oh" onclick="showImg(event)">Ohio</div>
       </div>
       <div class="details" id="indy">
         <div class="row">
@@ -203,21 +203,10 @@ $(document).ready(function(){
 $(".details").hide();
 $("#indiana").show();
 });*/
-function showImg1(){
+function showImg(event){
+var name=event.target.getAttribute("name");
 $(".details").hide();
-$("#indy").show();
-};
-function showImg2(){
-$(".details").hide();
-$("#mi").show();
-};
-function showImg3(){
-$(".details").hide();
-$("#chi").show();
-};
-function showImg4(){
-$(".details").hide();
-$("#oh").show();
+$("#"+ name).show();
 };
 $(document).ready(function(){
 $(".details").hide();

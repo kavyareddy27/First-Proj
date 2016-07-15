@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Calculator Example</title>
 		<meta charset="utf-8">
@@ -8,57 +8,68 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<style>
-			table,tr{
-				border: solid;
-				border-width: 0.6pt;
-			}
 			
-			td{
-				border: solid;
-				border-width: 0.6pt;
-				height:60%;
-				width:30%;
-				text-align: center;
-				color: red;
-			}
 			/*.focus{
 				background-color: lightblue;
 			}
 			button.btn:focus{
 				background-color:lightblue;
 			}*/
+		
+			.col{
+				border:0.5px solid;
+				border-width: 0.5px;
+				height:80px;
+				width: :100px;
+				margin:auto;
+				line-height: 80px;
+				text-align: center;
 			
-		</style>
-		<script type="text/javascript">
-		function changeColor(event){
-			
-				event.target.style.background='red';
-				event.stopPropagation();
 			}
-			
-		}
-		</script>
-		
-		
+			p{
+				color: darkblue;
+				font-size: 20pt;
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
+		</style>
 	</head>
 	<body>
-		<p> </p>
-		<table >
-			<tr>
-				<td><button type= "text" id="btn1" class="btn btn-color" onclick="changeColor(event)">1</button></td>
-				<td><button type= "text" id="btn2" class="btn btn-color" onclick="changeColor(event)">2</button></td>
-				<td><button type= "text" id="btn3" class="btn btn-color" onclick="changeColor(event)">3</button></td>
-			</tr>
-			<tr>
-				<td><button type= "text" id="btn" class="btn btn-color" onclick="changeColor(event)">4</button></td>
-				<td><button type= "text" id="btn" class="btn btn-color" onclick="changeColor(event)">5</button></td>
-				<td><button type= "text" id="btn" class="btn btn-color" onclick="changeColor(event)">6</button></td>
-			</tr>
-			<tr>
-				<td><button type= "text" id="btn7" class="btn btn-color" onclick="changeColor(event)">7</button></td>
-				<td><button type= "text" id="btn8" class="btn btn-color" onclick="changeColor(event)">8</button></td>
-				<td><button type= "text" id="btn9" class="btn btn-color" onclick="changeColor(event)">9</button></td>
-			</tr>
-		</table>
+		<div class="container">
+			<p>
+				Click on the buttons to find the sum!!
+			</p>
+			<div class="row">
+				<div class= "col col-xs-4" id="btn" value="1" onclick="changeColor(event)">1</div>
+				<div class= "col col-xs-4" id="btn" value="2" onclick="changeColor(event)">2</div>
+				<div class= "col col-xs-4" id="btn" value="3" onclick="changeColor(event)">3</div>
+			</div>
+			<div class="row">
+				<div class= "col col-xs-4" id="btn" value="4" onclick="changeColor(event)">4</div>
+				<div class= "col col-xs-4" id="btn5" value="5" onclick="changeColor(event)">5</div>
+				<div class= "col col-xs-4" id="btn6" value="6" onclick="changeColor(event)">6</div>
+			</div>
+			<div class="row">
+				<div class= "col col-xs-4" id="btn" value="7" onclick="changeColor(event)">7</div>
+				<div class= "col col-xs-4" id="btn" value="8" onclick="changeColor(event)">8</div>
+				<div class= "col col-xs-4" id="btn" value="9" onclick="changeColor(event)">9</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		/*function changeColor(event){
+			event.target.style.background='red';
+			}*/
+		/*function add(value){
+			var value+=value;
+		}*/
+		$(document).ready(function(){
+		$(".col").focus(function(){
+		$(this).css("background-color", "blue");
+		});
+		$(".col").blur(function(){
+		$(this).css("background-color", "grey");
+		});
+		});
+		</script>
 	</body>
 </html>

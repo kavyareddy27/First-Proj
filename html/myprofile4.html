@@ -4,78 +4,21 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <link rel ="stylesheet" type= "text/css" href ="../css/teststyle.css"/>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <style type="text/css">
-    body{
-    background-color:lightblue;
-    }
-    button{
-    background-color: red;
-    }
-    table,th,td{
-    border-style: solid;
-    border-width: 0.5pt;
-    border-color: black;
-    }
-    td,th{
-    text-align: center;
-    }
-    th{
-    background-color: white;
-    color: red;
-    }
-    td{
-    background-color: white;
-    color: green;
-    }
-    table{
-    width:400px;
-    height:300px;
-    }
-    div.col {
-    width: 250px;
-    height:90px;
-    margin-left: 30px;
-    border: 2px solid;
-    /*vertical-align: middle;*/
-    line-height: 90px;
-    text-align: center;
-    background-color: white;
-    font-weight: 30pt;
-    }
-    .col:hover{
-    width: 100%
-    padding-top: 30px;
-    padding-right: 20px;
-    color: red;
-    }
-    .col:active{
-    background-color: grey;
-    }
-    #pic1,#pic2,#pic3,#pic4{
-    padding-top: 20px;
-    display: block;
-    margin: auto;
-    width: 100%;
-    }
-    p{
-    text-align: justify;
-    padding-top: 20px;
-    }
-    </style>
+    <script type="text/javascript"></script>
   </head>
   <body>
     <div class="container">
       <div class="row">
         <h2>Info on States</h2>
         <div class="clearfix visible-xs-block"></div>
-        <div class="col col-xs-12"  onclick="showImg1()"> Indiana</div>
-        <div class="col col-xs-12"  onclick="showImg2()">Michigan</div>
-        <div class="col col-xs-12"  onclick="showImg3()">Chicago</div>
-        <div class="col col-xs-12"  onclick="showImg4()">Ohio</div>
+        <div class="col col-xs-12 col-sm-12"  onclick="showImg1()"> Indiana</div>
+        <div class="col col-xs-12 col-sm-12"  onclick="showImg2()">Michigan</div>
+        <div class="col col-xs-12 col-sm-12"  onclick="showImg3()">Chicago</div>
+        <div class="col col-xs-12 col-sm-12"  onclick="showImg4()">Ohio</div>
       </div>
       <div class="details" id="indy">
         <div class="row">
@@ -182,7 +125,6 @@
     </div>
   </div>
 </div>
-<script>
 /*function showImg1(){
 $(".details").hide();
 $("#indiana").show();
@@ -203,26 +145,5 @@ $(document).ready(function(){
 $(".details").hide();
 $("#indiana").show();
 });*/
-function showImg1(){
-$(".details").hide();
-$("#indy").show();
-};
-function showImg2(){
-$(".details").hide();
-$("#mi").show();
-};
-function showImg3(){
-$(".details").hide();
-$("#chi").show();
-};
-function showImg4(){
-$(".details").hide();
-$("#oh").show();
-};
-$(document).ready(function(){
-$(".details").hide();
-$("#indy").show();
-});
-</script>
 </body>
 </html>
