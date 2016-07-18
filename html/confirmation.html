@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Creating  HTML form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<style type="text/css">
+		body{
+			padding-top: 30px;
+		}
+		p{
+				color: darkblue;
+				font-size: 20pt;
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<p id="info">Enter the details below</p>
+			<div class="details">
+				
+				Name:<br>
+				<input type="text" id ="inp1" name="name"/><br>
+				
+				Gender:<br>
+				<input class="radioButton" type="radio" name="gender" id="inp2" value="male"/> Male<br>
+				<input class="radioButton" type="radio" name="gender" id="inp3" value="female"/> Female<br>
+				
+				State:<br>
+				<input class="messageCheckbox" type="checkbox" name="Indiana" id="inp4" value="Indiana"/> Indiana<br>
+				<input class="messageCheckbox" type="checkbox" name="Michigan" id="inp5" value="Michigan"/> Michigan<br>
+				<input class="messageCheckbox" type="checkbox" name="Chicago" id="inp6" value="Chicaho"/> Chicago<br>
+				<input class="messageCheckbox" type="checkbox" name="Ohio" id="inp7" value="Ohio"/> Ohio<br>
+				
+				Place of Residence:
+				<select id="res">
+					<option value="indiana">Indiana</option>
+					<option value="michigan">Michigan</option>
+					<option value="chicago">Chicago</option>
+					<option value="ohio">Ohio</option>
+				</select>
+				<input type="submit" value="Submit" id="sub"/>
+				
+			</div>
+			<div class="fullinfo">
+				<p id="checkdetails"> The details you entered is below</p>
+				<label> The Entered name is:<p id="nameinfo">
+				</p>
+				<label> Your gender is:</label><p id="genderinfo">
+			</p>
+			<label> Your state is:</label><p id="stateinfo">
+		</p>
+		<label> Your place of residence is:</label><p id="residenceinfo">
+	</p>
+	<input name="action" type="submit" value="Cancel" onclick="window.history.back();"/> 
+	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Confirm</button>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+			
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Confirmation</h4>
+				</div>
+				<div class="modal-body">
+					<p>You have confirmed the information.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".fullinfo").hide();
+$("#sub").click(function(){
+document.getElementById('nameinfo').innerHTML= $("#inp1").val();
+document.getElementById('genderinfo').innerHTML= $("input[type=radio]:checked").val();
+/*document.getElementById('genderinfo').innerHTML= $("#inp3").val();*/
+document.getElementById('stateinfo').innerHTML= $('.messageCheckbox:checked').val();
+/*document.getElementById('stateinfo').innerHTML= $("#inp5").val();
+document.getElementById('stateinfo').innerHTML= $("#inp6").val();
+document.getElementById('stateinfo').innerHTML= $("#inp7").val();*/
+document.getElementById('residenceinfo').innerHTML= $("#res").val();
+$("#info").hide();
+$(".details").hide();
+$("#checkdetails").show();
+$(".fullinfo").show();
+$("#back").click(function(){
+		history.back("file:///C:/Users/Kavyashree/AppData/Roaming/Sublime%20Text%203/Packages/User/First%20Proj/html/confirmation.html");
+		
+	});
+/*function goBack() {
+window.history.back();
+}*/
+});
+});
+</script>
+</body>
+</html>
