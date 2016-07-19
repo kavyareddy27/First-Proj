@@ -57,7 +57,7 @@
 		</p>
 		<label> Your place of residence is:</label><p id="residenceinfo">
 	</p>
-	<input name="action" type="submit" value="Cancel" onclick="window.history.back();"/> 
+	<button type="button" id="back" class="back" value="back"> Back </button> 
 	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Confirm</button>
 	<!-- Modal -->
 	<div class="modal fade" id="myModal" role="dialog">
@@ -98,7 +98,8 @@ $(".details").hide();
 $("#checkdetails").show();
 $(".fullinfo").show();
 $("#back").click(function(){
-		history.back("file:///C:/Users/Kavyashree/AppData/Roaming/Sublime%20Text%203/Packages/User/First%20Proj/html/confirmation.html");
+		("#checkdetails").hide();
+		(".details").show();
 		
 	});
 /*function goBack() {

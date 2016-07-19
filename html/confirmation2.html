@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Creating  HTML form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<style type="text/css">
+        .container{
+        	text-align: center;
+        	background-color: white;
+        }
+		body{
+			padding-top: 30px;
+			margin-left: 20%;
+			margin-right: 50%;
+			background-color: grey;
+		}
+		p{
+				color: darkblue;
+				font-size: 15pt;
+				padding-top: 20px;
+				padding-bottom: 30px;
+				padding-right: 30px;
+
+			}
+			#inp6{
+				padding-left: 20px;
+			}	
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		<div class="suff_info">
+		    <div class="person_details">
+			<p id="info">Enter the details below</p>
+	        <form class="form-inline">
+  			First Name:	
+  			<input type="text" id ="inp1" name="fname" placeholder="Enter first name"><p id="demo"></p>
+  			Last Name:	
+  			<input type="text" id ="inp2" name="lname" placeholder="Enter last name">
+			</form>
+			</div>
+		
+			
+			<div class="gender_details">
+			<p id="sexinfo">Enter the gender information</p>
+			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="Male">Male
+			    <input type="radio" name="optionsRadios" id="optionsRadios2" value="Female">Female
+  			</div>
+				
+			
+			<div class="location_details">
+			<p id="locationinfo">Enter the location information</p>
+			<form class="loc_details">	
+				<input class="messageCheckbox" type="checkbox" name="Indiana" id="inp4" value="Indiana"/> Indiana<br>
+				<input class="messageCheckbox" type="checkbox" name="Michigan" id="inp5" value="Michigan"/> Michigan<br>
+				<input class="messageCheckbox" type="checkbox" name="Chicago" id="inp6" value="Chicaho"/> Chicago<br>
+				<input class="messageCheckbox" type="checkbox" name="Ohio" id="inp7" value="Ohio"/> Ohio<br>
+			</form>
+			</div>
+
+			
+			<div class="state_details">
+			<p id="stateinfo">Enter the state information</p>
+			<form class="st_details">		
+			Place of Residence:
+			<select id="res">
+			<option value="Indiana">Indiana</option>
+			<option value="Michigan">Michigan</option>
+			<option value="Chicago">Chicago</option>
+			<option value="Ohio">Ohio</option>
+		    </select>
+			</form>
+			</div>
+			
+         
+			<input type="submit" value="Submit" id="sub" onclick="myFunction()"/>
+	    </div>
+
+	        <div class="fullinfo">
+				<p id="checkdetails"> The details you entered is below</p>
+				<label> The entered first name is:</label><p id="firstinfo"></p>
+				<label> The entered last name is:</label><p id="lastinfo"></p>
+				<label> Your gender is:</label><p id="genderinfo"></p>
+			    <label> Your state is:</label><p id="stateinfo"></p>
+		        <label> Your place of residence is:</label><p id="residenceinfo"></p>
+		    
+
+	        <button type="button" id="back" class="back" value="back"> Back </button> 
+	        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Confirm</button>
+	        <!-- Modal -->
+	        <div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">
+			
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Confirmation</h4>
+				</div>
+				<div class="modal-body">
+					<p>You have confirmed the information.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>	
+		</div>
+	</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		$(".fullinfo").hide();
+		$("#sub").click(function(){
+		document.getElementById('firstinfo').innerHTML= $("#inp1").val();
+		document.getElementById('lastinfo').innerHTML= $("#inp2").val();
+		document.getElementById('genderinfo').innerHTML= $("input[type=radio]:checked").val();
+		document.getElementById('stateinfo').innerHTML= $('.messageCheckbox:checked').val();
+	 	document.getElementById('residenceinfo').innerHTML= $("#res").val();
+		/*function myFunction() {
+        var x = document.getElementById("inp1").required;
+        document.getElementById("demo").innerHTML = x;
+        }*/
+        if(document.persondetails.fname.value == " "){
+            document.getElementById("#demo").innerHTML = "You must enter a username";
+            return false;
+        }
+        else{
+        	$("#info").hide();
+			$(".suff_info").hide();
+			$(".gender_details").hide();
+			$(".state_details").hide();
+			$(".location_details").hide();
+			$("#checkdetails").show();
+			$(".fullinfo").show();
+		}
+		
+		});
+	
+    });
+   
+</script>
+</body>
+</html>
