@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Onkeyup event example</title>
+	</head>
+	<body>
+		First Name:<input type="text" id="f1" onkeyup="myFunction()">
+		<script type="text/javascript">
+			function myFunction() {
+		var x = $("#f1");
+		x.value = x.value.toUpperCase();
+		}
+		</script>
+	</body>
+</html>

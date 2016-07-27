@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple Get request</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('button').click(function(){
+					$.ajax({url:"text.txt",success:function(result){
+						$("#demo").html(result);
+					}});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2>AJAX</h2>
+		<button>Click me</button>
+		<p id="demo"></p>
+		
+	</body>
+</html>

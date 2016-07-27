@@ -34,33 +34,40 @@
 	</head>
 	<body>
 		<div class="container">
-		<div class="suff_info">
+		<div class="suff_info" id="suff_info">
 		    <div class="person_details">
 			<p id="info">Enter the details below</p>
-	        <form class="form-inline">
+	        <div class ="row">
   			First Name:	
-  			<input type="text" id ="inp1" name="fname" placeholder="Enter first name"><p id="demo"></p>
+  			<input type="text" id ="inp1" name="fname" placeholder="Enter first name" required="true">
   			Last Name:	
-  			<input type="text" id ="inp2" name="lname" placeholder="Enter last name">
-			</form>
+  			<input type="text" id ="inp2" name="lname" placeholder="Enter last name" required="true">
+			
 			</div>
-		
+		    <div>
+					<form id="step2" onsubmit="ValidateEmail()">
+					Email Id:<input type="email" id ="inp3" name="email" placeholder="Enter your email" required="true"><br><br>
+					</form>
+					<form id="step2" onsubmit="Validatenumber()">
+					Contact number:<input type="text" id ="inp4" name="number" placeholder="Enter contact number" required="true">
+					</form>
+					</div>
 			
 			<div class="gender_details">
 			<p id="sexinfo">Enter the gender information</p>
-			    <input type="radio" name="optionsRadios" id="optionsRadios1" value="Male">Male
-			    <input type="radio" name="optionsRadios" id="optionsRadios2" value="Female">Female
+			    <input type="radio" name="optionsRadios" id="inp3" value="Male">Male
+			    <input type="radio" name="optionsRadios" id="inp4" value="Female">Female
   			</div>
 				
 			
 			<div class="location_details">
 			<p id="locationinfo">Enter the location information</p>
-			<form class="loc_details">	
-				<input class="messageCheckbox" type="checkbox" name="Indiana" id="inp4" value="Indiana"/> Indiana<br>
-				<input class="messageCheckbox" type="checkbox" name="Michigan" id="inp5" value="Michigan"/> Michigan<br>
-				<input class="messageCheckbox" type="checkbox" name="Chicago" id="inp6" value="Chicaho"/> Chicago<br>
-				<input class="messageCheckbox" type="checkbox" name="Ohio" id="inp7" value="Ohio"/> Ohio<br>
-			</form>
+			<form class="st_details">	
+				<input class="messageCheckbox" type="checkbox" name="Indiana" id="inp5" value="Indiana"/> Indiana<br>
+				<input class="messageCheckbox" type="checkbox" name="Michigan" id="inp6" value="Michigan"/> Michigan<br>
+				<input class="messageCheckbox" type="checkbox" name="Chicago" id="inp7" value="Chicago"/> Chicago<br>
+				<input class="messageCheckbox" type="checkbox" name="Ohio" id="inp8" value="Ohio"/> Ohio<br>
+		</form>
 			</div>
 
 			
@@ -78,7 +85,7 @@
 			</div>
 			
          
-			<input type="submit" value="Submit" id="sub" onclick="myFunction()"/>
+			<input type="submit" value="Submit" id="sub"/>
 	    </div>
 
 	        <div class="fullinfo">
@@ -120,28 +127,31 @@
 		document.getElementById('firstinfo').innerHTML= $("#inp1").val();
 		document.getElementById('lastinfo').innerHTML= $("#inp2").val();
 		document.getElementById('genderinfo').innerHTML= $("input[type=radio]:checked").val();
-		document.getElementById('stateinfo').innerHTML= $('.messageCheckbox:checked').val();
+		document.getElementById('stateinfo').innerHTML= $(".messageCheckbox:checked").val;
 	 	document.getElementById('residenceinfo').innerHTML= $("#res").val();
-		/*function myFunction() {
-        var x = document.getElementById("inp1").required;
-        document.getElementById("demo").innerHTML = x;
-        }*/
-        if(document.persondetails.fname.value == " "){
-            document.getElementById("#demo").innerHTML = "You must enter a username";
-            return false;
-        }
-        else{
         	$("#info").hide();
 			$(".suff_info").hide();
 			$(".gender_details").hide();
-			$(".state_details").hide();
 			$(".location_details").hide();
+			$(".state_details").hide();
 			$("#checkdetails").show();
 			$(".fullinfo").show();
-		}
-		
 		});
-	
+		function ValidateEmail(){
+			var pattern=[0-9];
+			if( )
+			$("#inp3").val()
+			
+		}
+	    $("#back").click(function(){
+	    	$(".fullinfo").hide();
+	    	$("#checkdetails").hide();
+	    	$("#info").show();
+           	$("#suff_info").show();
+            $(".gender_details").show();
+			$(".location_details").show();
+			$(".state_details").show();
+	    });
     });
    
 </script>

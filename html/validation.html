@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Validation</title>
+	
+</head>
+<body>
+	<form id="step1" onsubmit="Validatenumber(inp1)">
+	Contact number:<input id="numbersOnly" type="text" id="inp1">
+	<input type="submit">
+	</form>
+	<script type="text/javascript">
+		
+		function Validatenumber(inp1){
+          var pattern=[0-9];
+          var result = inp1.match(pattern);
+          document.getElementById("inp1").innerHTML = result;
+		}
+	</script>
+</body>
+
+</html>
