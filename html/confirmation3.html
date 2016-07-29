@@ -13,30 +13,29 @@
 			margin-top: 30px;
 			padding-bottom: 30px;
 			background-color: white;
-			width:600px;
 		}
-		#inp2{
-			margin-left: 10px;
-		}
-		.heading{
-			color:red;
-		    font-size: 30px;
-			font-style: italic;
-			margin-top: 40px;
-			margin-left: 382px;
-			display: table-cell; 
-            vertical-align: middle; 
-            text-align: center;
-            width:100%;
+		
+		
+		#head{
+				color:red;
+				font-size: 30px;
+				width:1140px;
+				text-align: center;
+				font-style: italic;
+                margin-top: 40px;
+			}
+		#secinfo{
+		 display: table-cell;
 		}
 		#info,#sexinfo,#locationinfo,#stateinfo,#checkdetails{
 			padding-top: 20px;
 			color:blue;
 			font-size: 20px;
 		}
-		.col{
+		/*.col{
 			float:left;
-			}
+			}*/
+			
 		#labels{
 			margin-top: 20px;
 				color:darkblue;
@@ -50,27 +49,37 @@
 		{
 		color: red;
 		}
+		@media (max-width: 568px)  {
+		body {
+		background-color: white;
+		}
+		}
+	
+		
 		
 		</style>
 	</head>
 	<body>
 		<div class="container">
-		<div class="row">
+			
 			<div class="heading">
-			<label><div class="col-sm-3 col-xs-12">State Information Form</div></label><br>
+				<label id= "head">State Information Form</label><br>
 			</div>
-			</div>
+			
 			<div class="personal_info">
 				<label><p id="info">Enter your personal details below</p></label>
 				<div class="row">
-					<div class="col-sm-3 col-xs-12"><label>First name:</label><input type="text" id ="inp1" name="fname" placeholder="Enter first name"/></div>
+					<div class="col-sm-3 col-xs-12"><label>First name:</label><input type="text" id ="inp1" name="fname" placeholder="Enter first name"/></div><br><br><br>
 					<div class="col-sm-3 col-xs-12"><label>Last name:</label><input type="text" id ="inp2" name="lname" placeholder="Enter last name"/></div><br><br><br>
 				</div>
 				<div class="secinfo">
 					<div class="row">
-						<div class="col col-sm-3 col-xs-12"><label>Email Id:</label><input type="email" id ="inp3" name="email" placeholder="e.g. myname@domain.com"/></div><br><br><br>
-						<div class="col col-sm-3 col-xs-12"><label>Contact number:</label><input type="text" id ="inp4" name="number" placeholder="Enter contact number"/><span id="errmsg"></span></div>
+						<div class="col-sm-3 col-xs-12"><label>Email Id:</label><input type="email" id ="inp3" name="email" placeholder="e.g.myname@domain.com"/></div><br><br><br>
 					</div>
+					<div class="row">
+						<div class="col-sm-3 col-xs-12"><label>Contact number:</label><input type="text" id ="inp4" name="number" placeholder="Enter contact number"/><span id="errmsg"></span></div>
+					</div>
+					
 				</div>
 				
 				<div class="gender_details">
@@ -136,27 +145,24 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 			$(".fullinfo").hide();
-
 			$("#inp1").keypress(function(event){
-		    var inputValue = event.charCode;
-		    if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)){
-		       event.preventDefault();
-		    }
-		    });
-
-		    $("#inp2").keypress(function(event){
-		    var inputValue = event.charCode;
-		    if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)){
-		       event.preventDefault();
-		    }
-		    });
-
+		var inputValue = event.charCode;
+		if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)){
+		event.preventDefault();
+		}
+		});
+		$("#inp2").keypress(function(event){
+		var inputValue = event.charCode;
+		if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)){
+		event.preventDefault();
+		}
+		});
 			$("#inp4").keypress(function (e) {
 			if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-		    //display error message
-		    $("#errmsg").html("Digits Only").show().fadeOut("slow");
-		    return false;
-		    }
+		//display error message
+		$("#errmsg").html("Digits Only").show().fadeOut("slow");
+		return false;
+		}
 			});
 			$("#sub").click(function(){
 			document.getElementById('firstinfo').innerHTML= $("#inp1").val();
